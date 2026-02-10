@@ -29,3 +29,28 @@ print(f"Your total score: {user_score}")
 
 
 print("\nComputer Batting Turn:")
+
+for i in range(turns):
+    computer = int(input(f"Bowl {i+1}: Enter The Number(1-6)"))
+    player = rand.randint(1,6)
+    print(f"Player bowled: {player}")
+
+
+    if player == computer:
+        print("You are Out!")
+        break
+    else:
+        computer_score += computer
+        print(f"Run Scored {computer_score }")
+print(f"Your total score: {computer_score}")  
+
+
+
+print(f"\nFinal Score => You: {user_score} | Computer: {computer_score}")
+
+if user_score == computer_score:
+    print("Score is Tie. Play again for result")
+elif user_score > computer_score:
+    print(f"You Win! Your Score: {user_score}")
+else:
+    print(f"Computer Wins! Computer Score: {computer_score}")
